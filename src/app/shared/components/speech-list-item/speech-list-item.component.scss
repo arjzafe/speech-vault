@@ -1,0 +1,9 @@
+.list-group-item {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  &.active {
+    background-color: #E8EBF7;
+    color: #111;
+  }
+}

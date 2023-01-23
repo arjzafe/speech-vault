@@ -1,0 +1,14 @@
+<div class="d-flex flex-column h-100">
+  <app-layout-header>
+    <div class="px-5 py-4 d-flex w-100 align-items-center">
+      <h3 class="m-0 p-0">Edit speech</h3>
+      <a [routerLink]="['/speeches', id]" class="btn btn-link ms-auto me-4">Cancel</a>
+      <button class="btn btn-primary text-white" (click)="updateSpeech()">Update</button>
+    </div>
+  </app-layout-header>
+  
+  <div class="py-3 px-5 flex-grow-1" *ngIf="speech">
+    <app-speech-form buttonLabel="Update" [speech]="speech"></app-speech-form>
+  </div>
+</div>
+<ng-template #toast></ng-template>

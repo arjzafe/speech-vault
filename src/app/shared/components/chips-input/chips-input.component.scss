@@ -1,0 +1,48 @@
+.chips {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ebddfe;
+  padding: 0 5px;
+  flex-wrap: wrap;
+  .left-icon {
+    color: #93799a;
+    font-size: 20px;
+  }
+}
+
+.chips-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+  align-items: center;
+  border-radius: 14px;
+  font-size: 13px;
+  height: 28px;
+  padding: 0 12px;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  .btn-remove-keyword {
+    color: #fff;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    outline: 0;
+    font-size: 16px;
+    transition: color 0.25s;
+    &:hover {
+      color: #000;
+      transition: color 0.25s;
+    }
+  }
+}
+
+.chips-input {
+  border-radius: 40px;
+  max-width: 350px;
+  flex-grow: 0;
+  margin-top: 5px;
+  width: auto;
+  margin-bottom: 5px;
+}

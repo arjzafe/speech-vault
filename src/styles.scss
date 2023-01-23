@@ -1,0 +1,100 @@
+
+$font-family-base: 'Inter', sans-serif;
+$primary: #a172fd;
+$secondary: #ebddfe;
+$info: #93799a;
+$body-color: #111;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+html {
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.ng-scroll-content {
+  display: block !important;
+}
+
+
+.sidebar-mobile {
+  display: none;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 380px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+  transition: margin-left 0.25s;
+  background-color: #fff;
+  .sidebar-action {
+    margin-top: auto;
+  }
+
+  .sidebar-header {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .btn-toggle {
+    display: none;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .sidebar {
+    z-index: 1000;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-grow: 1;
+    transition: margin-left 0.25s;
+    margin-left: -400px;
+    .btn-toggle {
+      display: block;
+    }
+    &.show {
+      margin-left: 0;
+      ~.main {
+        margin-right: -70%;
+      }
+      
+      .btn-toggle {
+        position: fixed;
+        top: 20px;
+        left: 5px;
+      }
+    }
+  }
+  
+  .sidebar-mobile {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 100%;
+    background: rgb(243, 242, 242);
+    .btn {
+      position: fixed;
+      top: 20px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .hide-420px {
+    display: none;
+  }
+}
+
+@media (max-width: 385px) {
+  .sidebar {
+    width: 100%;
+  }
+}

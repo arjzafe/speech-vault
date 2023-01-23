@@ -1,0 +1,44 @@
+<div class="sidebar-mobile">
+  <div class="py-4 px-2">
+    <button
+      class="btn btn-outline-info text-black btn-toggle"
+      (click)="toggleMobileMenu()"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+</div>
+<div class="sidebar" [ngClass]="{ show: showMobile }">
+  <div class="sidebar-header py-4">
+    <button
+      class="btn btn-primary text-black btn-toggle"
+      (click)="toggleMobileMenu()"
+    >
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="text-center mb-3">
+      <img src="assets/logo.png" class="img-fluid" />
+    </div>
+    <section class="search px-3">
+      <app-search (search)="onSearch($event)"></app-search>
+    </section>
+    <section class="sidebar-action px-3">
+      <a
+        (click)="toggleMobileMenu()"
+        routerLink="speeches/new"
+        class="btn btn-primary btn-block w-100 text-white rounded-pill"
+      >
+        <i class="bi bi-plus text-lg"></i> Add new speech
+      </a>
+    </section>
+  </div>
+
+  <section class="speeches flex-grow-1">
+    <ng-scrollbar [autoHeightDisabled]="true" [autoWidthDisabled]="true">
+      <app-speech-list
+        (selected)="toggleMobileMenu()"
+        [speeches]="speeches"
+      ></app-speech-list>
+    </ng-scrollbar>
+  </section>
+</div>
