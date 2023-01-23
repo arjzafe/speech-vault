@@ -1,16 +1,27 @@
 <label for="chips-input" class="chips">
-  <label for="chips-input"><i class="bi mx-3 left-icon" ngClass="{{icon}}"></i></label>
-  <div *ngFor="let keyword of keywords; let i = index" class="chips-item bg-info">
+  <label for="chips-input">
+    <i class="bi mx-3 left-icon" ngClass="{{ icon }}"></i>
+  </label>
+  <div
+    *ngFor="let keyword of keywords; let i = index"
+    class="chips-item bg-info"
+  >
     <span>{{ keyword }}</span>
-    <button type="button" class="btn-remove-keyword ms-2" (click)="removeKeyword(i)"><i class="bi bi-x"></i></button>
+    <button
+      type="button"
+      class="btn-remove-keyword ms-2"
+      (click)="removeKeyword(i)"
+    >
+      <i class="bi bi-x"></i>
+    </button>
   </div>
-  <input 
-    [type]="type" 
-    id="chips-input" 
-    [placeholder]="placeholder" 
-    type="text" 
-    class="form-control chips-input" 
-    [(ngModel)]="inputValue" 
-    (keydown.enter)="addKeyword($event)" 
+  <input
+    [type]="type"
+    id="chips-input"
+    [placeholder]="placeholder"
+    type="text"
+    class="form-control chips-input"
+    [(ngModel)]="inputValue"
+    (keydown.enter)="addKeyword($event)"
   />
-</label> 
+</label>

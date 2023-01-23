@@ -1,3 +1,7 @@
 <ul class="list-group" *ngIf="speeches">
-  <app-speech-list-item *ngFor="let speech of speeches" (selected)="onSelected()" [speech]="speech"></app-speech-list-item>
+  <app-speech-list-item
+    *ngFor="let speech of speeches"
+    (selected)="onSelected()"
+    [speech]="speech"
+  ></app-speech-list-item>
 </ul>

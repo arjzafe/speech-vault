@@ -18,13 +18,13 @@ export class EditSpeechComponent {
   speech!: Speech | null;
   speechSubs$!: Subscription;
   routeParamsSubs$!: Subscription;
-  
+
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private speechService: SpeechService,
     private toasterService: ToasterService,
-    private router: Router) {}
-  
+    private router: Router) { }
+
   ngOnInit(): void {
     this.routeParamsSubs$ = this.route.params.subscribe(params => {
       this.id = params['id']

@@ -6,7 +6,6 @@ import { NewSpeechComponent } from './new-speech.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '@app/shared/shared.module';
 
-
 @NgModule({
   declarations: [
     NewSpeechComponent

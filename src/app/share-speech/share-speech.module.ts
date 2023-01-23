@@ -7,7 +7,6 @@ import { SharedModule } from '@app/shared/shared.module';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     ShareSpeechComponent

@@ -15,11 +15,11 @@ export class SpeechFormComponent implements OnInit {
   @Output() submitSpeech: EventEmitter<Speech> = new EventEmitter();
 
   speechForm!: FormGroup;
-  
+
   constructor(
-    private fb: FormBuilder, 
-    private uuidService: UuidService, 
-    private datePipe: DatePipe) {}
+    private fb: FormBuilder,
+    private uuidService: UuidService,
+    private datePipe: DatePipe) { }
 
   ngOnInit(): void {
     const speechId = this.speech?.id || this.uuidService.make();
@@ -32,7 +32,7 @@ export class SpeechFormComponent implements OnInit {
     this.speechForm = this.fb.group({
       id: [speechId],
       content: [this.speech?.content, Validators.required],
-      author:[this.speech?.author, Validators.required],
+      author: [this.speech?.author, Validators.required],
       date: [this.datePipe.transform(this.speech?.date, 'yyyy-MM-dd'), Validators.required],
       keywords: [keywords]
     })

@@ -2,35 +2,43 @@
   <div class="row mb-3">
     <div class="col-md-6">
       <label for="author" class="form-label">Author:</label>
-      <input 
-        type="text" 
-        class="form-control" 
-        [ngClass]="{'border-danger': author?.invalid && (author?.dirty || author?.touched)}" 
-        placeholder="Author" 
-        id="author" 
+      <input
+        type="text"
+        class="form-control"
+        [ngClass]="{
+          'border-danger': author?.invalid && (author?.dirty || author?.touched)
+        }"
+        placeholder="Author"
+        id="author"
         formControlName="author"
       />
     </div>
     <div class="col-md-6">
       <label for="speechDate" class="form-label">Speech date:</label>
-      <input 
-        type="date" 
-        class="form-control" 
-        placeholder="Date" 
-        id="speechDate" 
+      <input
+        type="date"
+        class="form-control"
+        placeholder="Date"
+        id="speechDate"
         formControlName="date"
-        [ngClass]="{'border-danger': date?.invalid && (date?.dirty || date?.touched)}"
+        [ngClass]="{
+          'border-danger': date?.invalid && (date?.dirty || date?.touched)
+        }"
       />
     </div>
   </div>
   <div class="mb-3 flex-grow-1 d-flex flex-column">
     <label for="content" class="form-label">Speech:</label>
-    <textarea 
-      class="form-control flex-grow-1" 
-      placeholder="speech" 
-      id="content" 
-      [ngClass]="{'border-danger': content?.invalid && (content?.dirty || content?.touched)}"
-      formControlName="content">
+    <textarea
+      class="form-control flex-grow-1"
+      placeholder="speech"
+      id="content"
+      [ngClass]="{
+        'border-danger':
+          content?.invalid && (content?.dirty || content?.touched)
+      }"
+      formControlName="content"
+    >
     </textarea>
   </div>
 

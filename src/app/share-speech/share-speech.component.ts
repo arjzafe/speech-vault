@@ -12,18 +12,18 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./share-speech.component.scss']
 })
 export class ShareSpeechComponent {
-  
+
   emailForm!: FormGroup;
   speech!: Speech | null;
   speechSubs$!: Subscription;
   routeParamsSubs$!: Subscription;
-  
+
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private speechService: SpeechService,
     private fb: FormBuilder,
     private toasterService: ToasterService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.routeParamsSubs$ = this.route.params.subscribe(params => {

@@ -14,9 +14,9 @@ export class NewSpeechComponent implements OnInit {
   @ViewChild(SpeechFormComponent) speechForm!: SpeechFormComponent;
 
   constructor(
-    private speechService: SpeechService, 
+    private speechService: SpeechService,
     private toasterService: ToasterService,
-    private router: Router) {}
+    private router: Router) { }
 
   ngOnInit(): void {
   }

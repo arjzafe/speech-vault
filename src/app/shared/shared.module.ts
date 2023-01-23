@@ -47,7 +47,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    NgScrollbarModule 
+    NgScrollbarModule
   ]
 })
 export class SharedModule { }

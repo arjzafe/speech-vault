@@ -14,7 +14,7 @@ export class LayoutSidebarComponent {
   onSearch(q: string) {
     this.search.emit(q);
   }
-  
+
   toggleMobileMenu() {
     this.showMobile = !this.showMobile;
   }
